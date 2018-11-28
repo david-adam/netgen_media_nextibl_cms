@@ -24,6 +24,7 @@
     },
     "require": {
         "php": "^7.1",
+        "ext-imagick": "*",
         "symfony/symfony": "^3.4.11",
         "twig/extensions": "^1.5.2",
         "symfony/assetic-bundle": "^2.8.2",
