@@ -129,6 +129,24 @@
         "symfony-assets-install": "relative",
         "incenteev-parameters": {
             "keep-outdated": true,
+            "env-map": {
+                "SYMFONY_SECRET": "SYMFONY_SECRET",
+                "DATABASE_DRIVER": "DATABASE_DRIVER",
+                "DATABASE_HOST": "DATABASE_HOST",
+                "DATABASE_PORT": "DATABASE_PORT",
+                "DATABASE_NAME": "DATABASE_NAME",
+                "DATABASE_USER": "DATABASE_USER",
+                "DATABASE_PASSWORD": "DATABASE_PASSWORD",
+                "SEARCH_ENGINE": "SEARCH_ENGINE",
+                "SOLR_DSN": "SOLR_DSN",
+                "SENTRY_DSN": "SENTRY_DSN",
+                "HTTPCACHE_PURGE_SERVER": "HTTPCACHE_PURGE_SERVER",
+                "purge_type": "purge_type",
+                "server_environment": "server_environment",
+                "imagemagick_path": "imagemagick_path",
+                "ngsite.default.site_domain": "ngsite.default.site_domain",
+                "ngsite.default.locations.site_info.id": "ngsite.default.locations.site_info.id"
+            },
             "file": "app/config/parameters.yml"
         },
         "branch-alias": {
