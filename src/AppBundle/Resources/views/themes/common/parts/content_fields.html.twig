@@ -1,4 +1,4 @@
-{% macro image(content, location, alias_name, lazy_loading) %}
+{% macro image(content, location, alias_name, lazy_loading, link_class) %}
     {% set alias_name = alias_name ?? 'i480' %}
     {% set lazy_loading = lazy_loading ?? ezpublish.configResolver.getParameter('lazy_loading.enabled', 'ngsite') %}
 
@@ -17,6 +17,7 @@
                         'alias': alias_name,
                         'link_href': location is not empty ? path(location) : null,
                         'lazy_loading': lazy_loading,
+                        'link_class': link_class ?? null,
                     }
                 }
             ) }}
