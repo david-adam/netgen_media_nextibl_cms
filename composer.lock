@@ -5,6 +5,7 @@
         "This file is @generated automatically"
     ],
     "content-hash": "3c172bf91930c4dffa78dc21925952d3",
+    
     "packages": [
         {
             "name": "clue/stream-filter",
