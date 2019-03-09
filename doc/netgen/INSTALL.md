@@ -26,23 +26,10 @@ Use the following MySQL DDL to create a database which will be used for your pro
 CREATE DATABASE <db_name> CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci;
 ```
 
-### Clone the repo
-
-Clone this repo to an empty directory and position yourself in newly created directory.
-
-### Run Composer to install dependencies
-
-If you're setting up the site in development environment, you can simply run:
+### Create the new project based on this repo
 
 ```
-composer install
-```
-
-However, if you're setting up the site in production environment,
-Composer **must** be ran as follows:
-
-```
-SYMFONY_ENV=prod composer install --no-dev -o
+composer create-project netgen/media-site
 ```
 
 Near the end of vendor installation procedure, when asked, be sure to specify
@@ -62,6 +49,26 @@ or to build production versions of the assets:
 ```
 yarn install
 yarn build:prod
+```
+
+### Generate image variations
+
+If using demo content, it can be quite resource intensive to generate all needed image variations
+at request time, especially when demo content uses high quality and high resolution images.
+
+To overcome this, you can use the following command to generate all image variations for all images:
+
+```
+php bin/console ngsite:content:generate-image-variations
+```
+
+This command will take a couple of minutes to complete, so grab a cup of coffee while it's running.
+
+You can also limit the command only to a subset of image variations, subtrees, content types and
+content fields. Use the following command to list all available options:
+
+```
+php bin/console ngsite:content:generate-image-variations --help
 ```
 
 ### Import database schema and demo data
